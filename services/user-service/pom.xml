@@ -73,6 +73,12 @@
             <artifactId>events</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.pro</groupId>
+            <artifactId>errors</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
 </project>
