@@ -12,8 +12,8 @@ public class EventPublisher {
 
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
-    public void publish(String topic, String key, Object event) {
-        kafkaTemplate.send(topic, key, event)
+    public void publish(String topic, Object event) {
+        kafkaTemplate.send(topic, event)
                 .whenComplete((recordMetadata, e) -> {
                     if (e != null) {
                         log.error("Error publishing event: {}", e.getMessage());
